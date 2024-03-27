@@ -253,7 +253,7 @@
   min-height: 60px;
   line-height: 60px;
   background: var(--overlay-color);
-  border-bottom: 1px solid var(--overlay-edge-color);
+  // border-bottom: 1px solid var(--overlay-edge-color);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   // border-bottom: 1px solid darken($text-color-darker, 32%);

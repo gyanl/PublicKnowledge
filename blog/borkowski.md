@@ -1,9 +1,9 @@
 ---
 layout: post
-author: 
-title:
-subtitle:
-tags: 
+author: Charu Pragya
+title: Borkowski
+subtitle: London PR
+tags: website
 thumbnail: https://gyanl.com/assets/thumbs/default.png
 ---
 
