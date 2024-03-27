@@ -5,9 +5,9 @@ layout: default
 <div class="intro">
 
   <h5>ABOUT ME</h5>
-  <p class="typewriter">
+  <p id="typewriter">
     Public Knowledge is an opinionated design studio. This is our presence on the internet.
-  <br>
+    <br>
     Our team of designers, developers, and strategists who make technology work for humans.
   </p>
 </div>
@@ -20,7 +20,7 @@ layout: default
   {{ content }}
 
   {% assign blog_posts = site.blog | sort: 'date' | reverse %}
-  
+
   {%- if blog_posts.size > 0 -%}
   {%- if page.list_title -%}
   <h2 class="post-list-heading">{{ page.list_title }}</h2>
@@ -55,4 +55,29 @@ layout: default
     postItems[i].style.animationDelay = delay + "s";
     delay += .05;
   }
+
+  var i = 0;
+  var typeBox = document.getElementById("typewriter");
+  var txt = typeBox.innerHTML;
+  typeBox.innerHTML = "";
+  var speed = 20; /* The speed/duration of the effect in milliseconds */
+
+  function typeWriter() {
+    if (i < txt.length) {
+      typeBox.innerHTML += txt.charAt(i);
+      if (txt.charAt(i) == ".") {
+        speed = 1000;
+      } else if (txt.charAt(i) == " ") {
+        speed = 100;
+      }
+      else {
+        speed = 25;
+      }
+      i++;
+      setTimeout(typeWriter, speed);
+
+    }
+  }
+
+  window.onload = typeWriter;
 </script>
