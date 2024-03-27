@@ -8,17 +8,12 @@ layout: default
     Public Knowledge is an opinionated design studio. This is our presence on the internet.
 
 
-    
+
     Our team of designers, developers, and strategists make technology that works for humans.
   </h4>
 </div>
 
 <div class="home">
-  {%- if page.title -%}
-  <h1 class="page-heading">{{ page.title }}</h1>
-  {%- endif -%}
-
-  {{ content }}
 
   {% assign blog_posts = site.blog | sort: 'date' | reverse %}
 
@@ -28,7 +23,7 @@ layout: default
   {%- endif -%}
   <ul class="post-list">
     {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-    {%- for post in blog_posts -%}
+    {%- for post in site.blog -%}
     <li>
       <span class="post-meta">{{ post.date | date: date_format }}</span>
       <h3>
