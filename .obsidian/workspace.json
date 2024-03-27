@@ -11,9 +11,11 @@
             "id": "8a1107ccd01bb421",
             "type": "leaf",
             "state": {
-              "type": "mk-space",
+              "type": "markdown",
               "state": {
-                "path": "blog"
+                "file": "blog/ahfl.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -92,6 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "blog/ahfl.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -108,6 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "blog/ahfl.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -129,7 +133,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "blog/ahfl.md"
+              }
             }
           }
         ]
@@ -149,7 +155,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ac834a7c6487b36f",
+  "active": "8a1107ccd01bb421",
   "lastOpenFiles": [
     "blog/blog.md",
     "blog/2015-01-01-colophon.md",

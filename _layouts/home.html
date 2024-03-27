@@ -13,32 +13,18 @@ layout: default
   </h4>
 </div>
 
-<div class="home">
-
-  {% assign blog_posts = site.blog | sort: 'date' | reverse %}
-
-  {%- if blog_posts.size > 0 -%}
-  {%- if page.list_title -%}
-  <h2 class="post-list-heading">{{ page.list_title }}</h2>
-  {%- endif -%}
-  <ul class="post-item">
-    {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-    {%- for post in site.blog -%}
-    <li>
-      <span class="post-meta">{{ post.date | date: date_format }}</span>
-      <h3>
-        <a class="post-link" href="{{ post.url | relative_url }}">
-          {{ post.title | escape }}
-        </a>
-      </h3>
-      {%- if site.show_excerpts -%}
-      {{ post.excerpt }}
-      {%- endif -%}
-    </li>
-    {%- endfor -%}
-  </ul>
-  {%- endif -%}
+<div class="blog-container">
+    {% for post in site.blog %}
+        <div class="blog-card">
+            <img src="{{ post.thumbnail }}" alt="Thumbnail for {{ post.title }}">
+            <h2>{{ post.title }}</h2>
+            <h3>{{ post.subtitle }}</h3>
+            <p>Author: {{ post.author }}</p>
+            <a href="{{ post.url }}">Read More</a>
+        </div>
+    {% endfor %}
 </div>
+
 
 
 
