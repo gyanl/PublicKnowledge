@@ -1,9 +1,12 @@
 ---
 author: 
+date: 2024-03-17
 layout: post
-title: Advanced Fuels
 subtitle: Saving the world one plastic bag at a time
-tags: website
+tags:
+  - website
 thumbnail: https://gyanl.com/assets/thumbs/default.png
+title: Advanced Fuels
 ---
+
 sdjkjkfad

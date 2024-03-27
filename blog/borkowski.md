@@ -1,10 +1,12 @@
 ---
-layout: post
 author: Charu Pragya
-title: Borkowski
+date: 1996-03-17
+layout: post
 subtitle: London PR
-tags: website
+tags:
+  - website
 thumbnail: https://gyanl.com/assets/thumbs/default.png
+title: Borkowski
 ---
 
 qsanfkwdk

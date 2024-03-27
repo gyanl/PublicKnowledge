@@ -1,10 +1,10 @@
 ---
 author: 
 layout: post
-title:
-subtitle:
+subtitle: 
 tags: 
 thumbnail: https://gyanl.com/assets/thumbs/default.png
+title: 
 ---
 
 
