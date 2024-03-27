@@ -1,0 +1,12 @@
+.bundle
+.sass-cache
+Gemfile.lock
+_site
+*.gem
+_posts/.DS_Store
+.DS_Store
+_posts/.obsidian/workspace.json
+_posts/.obsidian/core-plugins.json
+_posts/.obsidian/core-plugins-migration.json
+vendor
+.DS_Store
