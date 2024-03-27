@@ -14,15 +14,16 @@ layout: default
 </div>
 
 <div class="blog-container">
-    {% for post in site.blog %}
-        <div class="post-item">
-            <img src="{{ post.thumbnail }}" alt="Thumbnail for {{ post.title }}">
-            <h2>{{ post.title }}</h2>
-            <h3>{{ post.subtitle }}</h3>
-            <p>Author: {{ post.author }}</p>
-            <a href="{{ post.url }}">Read More</a>
-        </div>
-    {% endfor %}
+  {% for post in site.blog %}
+  <a href="{{ post.url }}"></a>
+  <div class="post-item">
+    <img class="thumbnail" src="{{ post.thumbnail }}" alt="Thumbnail for {{ post.title }}">
+    <h2>{{ post.title }}</h2>
+    <h3>{{ post.subtitle }}</h3>
+    <p>Author: {{ post.author }}</p>
+  </div>
+  </a>
+  {% endfor %}
 </div>
 
 
