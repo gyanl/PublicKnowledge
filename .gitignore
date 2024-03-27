@@ -10,3 +10,5 @@ _posts/.obsidian/core-plugins.json
 _posts/.obsidian/core-plugins-migration.json
 vendor
 .DS_Store
+.obsidian
+.make-md

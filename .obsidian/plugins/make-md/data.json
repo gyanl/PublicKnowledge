@@ -42,7 +42,9 @@
     "spaces://$tags/spaces://#sketchnotes",
     "//_posts",
     "//_posts/_posts/Blog",
-    "_posts/_posts/Context"
+    "_posts/_posts/Context",
+    "_posts/_posts/Obsidian Templates",
+    "_posts/_posts/Obsidian Templates"
   ],
   "expandFolderOnClick": true,
   "menuTriggerChar": "/",
