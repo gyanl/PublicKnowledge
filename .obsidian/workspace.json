@@ -4,16 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "2dbff46d709f05af",
+        "id": "dde185b24cb90b5c",
         "type": "tabs",
         "children": [
           {
-            "id": "8a1107ccd01bb421",
+            "id": "c381a4b266875e1f",
             "type": "leaf",
             "state": {
-              "type": "mk-space",
+              "type": "markdown",
               "state": {
-                "path": "blog"
+                "file": "_blog/hammock-map.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -56,15 +58,7 @@
             }
           },
           {
-            "id": "d0c5dd2d525f3c6b",
-            "type": "leaf",
-            "state": {
-              "type": "bookmarks",
-              "state": {}
-            }
-          },
-          {
-            "id": "ac834a7c6487b36f",
+            "id": "7f6e3e3d2ddfc9c6",
             "type": "leaf",
             "state": {
               "type": "mk-path-view",
@@ -72,7 +66,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -92,23 +86,13 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "_blog/hammock-map.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
                 "searchQuery": "",
                 "backlinkCollapsed": false,
-                "unlinkedCollapsed": true
-              }
-            }
-          },
-          {
-            "id": "7ea3cf885c756708",
-            "type": "leaf",
-            "state": {
-              "type": "outgoing-link",
-              "state": {
-                "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
@@ -129,7 +113,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "_blog/hammock-map.md"
+              }
             }
           }
         ]
@@ -141,16 +127,32 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Open quick switcher": false,
-      "graph:Open graph view": false,
-      "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
-      "command-palette:Open command palette": false
+      "command-palette:Open command palette": false,
+      "publish:Publish changes...": false
     }
   },
-  "active": "8a1107ccd01bb421",
+  "active": "c381a4b266875e1f",
   "lastOpenFiles": [
+    "_blog/colophon.md",
+    "_blog/pinklist.md",
+    "_blog/borkowski.md",
+    "_blog/ahfl.md",
+    "_blog/hammock-map.md",
+    "Obsidian Templates/Todo List.md",
+    "Obsidian Templates/Task.md",
+    "Obsidian Templates/Recipe.md",
+    "Obsidian Templates/Project.md",
+    "Obsidian Templates/Obsidian Templates.md",
+    "Obsidian Templates/Image.md",
+    "Obsidian Templates/Image Carousel.md",
+    "Obsidian Templates/Date-Day.md",
+    "Obsidian Templates",
+    "_blog/Untitled.md",
+    "_blog/blog.md",
+    "Untitled.canvas",
+    "_blog/_blog.md",
     "blog/ahfl.md",
     "_blog/Obsidian Templates/Todo List.md",
     "_blog/Obsidian Templates/Task.md",
@@ -160,25 +162,9 @@
     "_blog/Obsidian Templates/Image Carousel.md",
     "_blog/Obsidian Templates/Image.md",
     "_blog/Obsidian Templates/Date-Day.md",
-    "_blog/hammock-map.md",
-    "_blog/pinklist.md",
-    "_blog/blog.md",
-    "_blog/borkowski.md",
-    "_blog/ahfl.md",
-    "_blog/Untitled.md",
     "_blog/Obsidian Templates",
-    "_blog/2015-01-01-colophon.md",
     "_blog",
     "blog/blog.md",
-    "blog/2015-01-01-colophon.md",
-    "blog/borkowski.md",
-    "blog/hammock-map.md",
-    "blog/Untitled.md",
-    "blog/pinklist.md",
-    "2024-03-17.md",
-    "blog/_posts.md",
-    "_posts/Untitled 3.md",
-    "_posts/Untitled 4.md",
     "PublicKnowledge",
     "_posts/Blog",
     "Blog",

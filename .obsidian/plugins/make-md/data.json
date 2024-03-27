@@ -19,7 +19,7 @@
   "saveAllContextToFrontmatter": true,
   "editorFlowStyle": "seamless",
   "autoOpenFileContext": false,
-  "activeView": "blog",
+  "activeView": "_blog",
   "hideFrontmatter": true,
   "activeSpace": "",
   "defaultDateFormat": "MMM dd yyyy",
@@ -53,7 +53,9 @@
   "folderContextFile": "context",
   "folderFrameFile": "frames",
   "spacesFolder": "Spaces",
-  "hiddenFiles": [],
+  "hiddenFiles": [
+    "_blog/blog.md"
+  ],
   "hiddenExtensions": [
     ".mdb"
   ],
@@ -66,6 +68,7 @@
   "inlineContextNameLayout": "vertical",
   "waypoints": [
     "_posts",
+    "_blog",
     "blog"
   ],
   "spacesUseAlias": false,
