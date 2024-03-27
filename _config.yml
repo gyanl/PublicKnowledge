@@ -9,7 +9,7 @@ show_excerpts: true # set to true to show excerpts on the homepage
 permalink: /:title
 
 exclude:
-  - blog/blog.md
+  - _blog/blog.md
 
 collections:
   blog:
