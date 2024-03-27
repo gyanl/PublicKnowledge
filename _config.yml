@@ -11,7 +11,7 @@ permalink: /:title
 collections:
   blog:
     output: true
-    permalink: /:path/
+    permalink: /:title/
 
 # Minima date format
 # refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this
@@ -20,14 +20,14 @@ minima:
 
   # generate social links in footer
   social_links:
-    twitter: gyanl
-    github:  gyanl
+    # twitter: gyanl
+    # github:  gyanl
     # rss: rss
-    dribbble: gyanl
+    # dribbble: gyanl
     # facebook: jekyll
     # flickr:   jekyll
-    instagram: gyanl
-    linkedin: gyanlakhwani
+    # instagram: gyanl
+    # linkedin: gyanlakhwani
     # pinterest: jekyll
     # youtube: jekyll
     # youtube_channel: UC8CXR0-3I70i1tfPg1PAE1g
@@ -46,8 +46,8 @@ minima:
 
 # If you want to link only specific pages in your header, uncomment
 # this and add the path to the pages in order as they should show up
-#header_pages:
-# - about.md
+header_pages:
+- about.md
 
 # Build settings
 
