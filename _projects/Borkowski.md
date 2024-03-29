@@ -7,6 +7,7 @@ tags:
   - website
 thumbnail: /assets/thumbs/borkowski.jpg
 title: Borkowski
+permalink: borkowski
 ---
 
 qsanfkwdk

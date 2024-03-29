@@ -7,6 +7,7 @@ tags:
   - website
 thumbnail: /assets/thumbs/ahfl.jpg
 title: Advanced Fuels
+permalink: ahfl
 ---
 
 sdjkjkfad

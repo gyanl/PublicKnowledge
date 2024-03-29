@@ -6,6 +6,7 @@ subtitle: Visualising Texts over the Globe
 tags: 
 thumbnail: /assets/thumbs/hammock.jpg
 title: Hammock Map
+permalink: hammock
 ---
 
 > #### Team

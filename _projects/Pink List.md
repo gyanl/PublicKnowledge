@@ -7,6 +7,7 @@ tags:
   - website
 thumbnail: /assets/thumbs/pinklist.jpg
 title: Pink List
+perma: pinklist
 ---
 
 adsasads
