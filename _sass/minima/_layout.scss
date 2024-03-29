@@ -564,7 +564,7 @@ h1.post-title.p-name {
   border-radius: 4px;
   opacity: 0;
   animation: fadeInUp;
-  animation-duration: 200ms;
+  animation-duration: 300ms;
   animation-fill-mode: forwards;
   transition: transform 0.1s ease;
   transform-style: preserve-3d;
@@ -634,10 +634,12 @@ h1.post-title.p-name {
 @keyframes fadeMoveUp {
   0% {
     transform: translateY(0);
+    background-color: rgba(255, 255, 255, 0);
   }
 
   100% {
     transform: translateY(-12px);
+    background-color: var(--background-color);
   }
 }
 
@@ -646,9 +648,8 @@ h1.post-title.p-name {
   padding: 2*$spacing-unit 0;
   margin: 30vh 0 0 0;
   border-radius: 8px;
-  background-color: var(--background-color);
   border-radius: 10px 10px 0 0;
-  animation: fadeMoveUp 1s ease-out;
+  animation: fadeMoveUp 300ms;
   animation-fill-mode: forwards;
   position: relative;
   z-index: 1;
