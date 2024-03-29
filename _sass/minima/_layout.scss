@@ -276,7 +276,8 @@
 
 @media screen and (max-width: $on-palm) {
   .site-header {
-    position: relative;
+    // position: relative;
+    left: $spacing-unit;
   }
 }
 
@@ -289,7 +290,7 @@
   vertical-align: middle;
 
   @include media-query($on-palm) {
-    padding-right: 45px;
+    // padding-right: 45px;
   }
 
   &,

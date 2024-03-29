@@ -8,9 +8,6 @@ show_excerpts: true # set to true to show excerpts on the homepage
 
 permalink: /:title
 
-plugins:
-  - jekyll-optional-front-matter
-
 collections:
   projects:
     output: true
@@ -70,5 +67,6 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
   - jemoji
+  - jekyll-optional-front-matter
 
 theme: jekyll-theme-minimal
