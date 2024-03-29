@@ -5,7 +5,7 @@ layout: post
 subtitle: London PR
 tags:
   - website
-thumbnail: https://gyanl.com/assets/thumbs/default.png
+thumbnail: /assets/thumbs/borkowski.jpg
 title: Borkowski
 ---
 
