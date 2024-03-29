@@ -384,9 +384,7 @@ pre {
     padding-left: 0;
   }
 }
-/**
- * Wrapper
- */
+
 .wrapper {
   // max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 4));
   // max-width:         calc(#{$content-width} - (#{$spacing-unit} * 4));
@@ -400,8 +398,8 @@ pre {
     // max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
     // max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
     // max-width: 720px;
-    padding-right: $spacing-unit * 4;
-    padding-left: $spacing-unit * 4;
+    // padding-right: $spacing-unit * 4;
+    // padding-left: $spacing-unit * 4;
   }
 }
 /**
