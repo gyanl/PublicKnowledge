@@ -493,7 +493,7 @@
  */
 .page-content {
   // background: var(--background-color);
-  padding: $spacing-unit 0;
+  padding: 0 0 $spacing-unit 0;
   flex: 1 0 auto;
 }
 
@@ -590,8 +590,9 @@ h1.post-title.p-name {
 }
 
 .hero{
-  height: 20vh;
+  height: 40vh;
   object-fit: cover;
+  object-position: 50% 0%;
 }
 
 .thumbnail-small {

@@ -4,9 +4,9 @@ layout: default
 
 ---
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+  <img class="hero" src="{{ page.thumbnail }}" style="view-transition-name: {{ page.title | remove: ' ' }};">
 
   <header class="post-header">
-    <img class="hero" src="{{ page.thumbnail }}" style="view-transition-name: {{ page.title | remove: ' ' }};">
     <h1 class="post-title p-name" style="view-transition-name: {{ page.title | remove: ' ' }}Text;" itemprop="name headline">{{ page.title | escape }}</h1>
 
     {%- if page.subtitle -%}
