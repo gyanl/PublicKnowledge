@@ -133,9 +133,9 @@ img {
 
 .post img {
   // transition: 0.1s;
-  outline: 1px solid rgba(0,0,0,.15);
-  outline-offset: -1px;
-  border-radius: 6px;
+  // outline: 1px solid rgba(0,0,0,.15);
+  // outline-offset: -1px;
+  // border-radius: 6px;
 }
 
 .post img:hover {
@@ -391,8 +391,8 @@ pre {
   // max-width: 960px;
   margin-right: auto;
   margin-left: auto;
-  padding-right: $spacing-unit * 2;
-  padding-left: $spacing-unit * 2;
+  // padding-right: $spacing-unit * 2;
+  // padding-left: $spacing-unit * 2;
   @extend %clearfix;
   @media screen and (min-width: $on-large) {
     // max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
