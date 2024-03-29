@@ -9,6 +9,6 @@ title: Hammock Map
 ---
 
 > #### Team
-> [[namita]] · [[charu]] · [[gyan]]
+> [[Namita Sunil]] · [[Gyan Lakhwani]] · [[Charu Pragya]]
 
 Our Friends at Hammock Magazine came to us with an idea for a map of writers around the world. 
