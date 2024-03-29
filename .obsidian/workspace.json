@@ -64,6 +64,14 @@
               "type": "mk-path-view",
               "state": {}
             }
+          },
+          {
+            "id": "c76d6dc7760f9e37",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
           }
         ],
         "currentTab": 2
