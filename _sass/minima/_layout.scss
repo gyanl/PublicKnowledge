@@ -519,7 +519,6 @@ h1.post-title.p-name{
 }
 
 .post-item {
-  // background: white;
   display: inline-block;
   // margin: 0 $spacing-unit/2 $spacing-unit 0;
   padding: $spacing-unit/4 0;
@@ -528,6 +527,7 @@ h1.post-title.p-name{
   transition: 0.2s;
   border-radius: 4px;
   opacity: 0;
+  transition: .2s;
   animation: fadeInUp .5s ease-in-out;
   animation-fill-mode: forwards;
   // border: 1px solid rgba(0,0,0,0.05);
