@@ -50,26 +50,33 @@ for (var i = 0; i < postItems.length; i++) {
   // Add an animation delay of .05 * i seconds
   postItems[i].style.animationDelay = (0.05 * i) + 's';
 
-  // Mouseover event listener
-  postItems[i].addEventListener("mouseover", function(event) {
-    var rect = event.target.getBoundingClientRect();
-    var mouseX = event.clientX - rect.left;
-    var itemWidth = rect.width;
-    var rotation = (mouseX / itemWidth) * 10 - 5;
-    event.target.style.transform = "rotateY(" + rotation + "deg)";
-  });
-
-  // Mouseout event listener to reset the rotation
-  postItems[i].addEventListener("mouseout", function(event) {
-    event.target.style.transform = "rotateY(0deg)";
-  });
+  postItems[i].addEventListener("mousemove", handleHover);
+  postItems[i].addEventListener("mouseleave", resetStyles);
 }
 
-// Typewriter effect
-var typeBox = document.getElementById("typewriter");
-var txt = typeBox.innerHTML;
-typeBox.innerHTML = "";
-var speed = 20; // The speed/duration of the effect in milliseconds
+const motionMatchMedia = window.matchMedia("(prefers-reduced-motion)");
+const THRESHOLD = 15;
 
+function handleHover(e) {
+  const { clientX, clientY, currentTarget } = e;
+  const { clientWidth, clientHeight, offsetLeft, offsetTop } = currentTarget;
 
+  const horizontal = (clientX - offsetLeft) / clientWidth;
+  const vertical = (clientY - offsetTop) / clientHeight;
+  const rotateX = (THRESHOLD / 2 - horizontal * THRESHOLD).toFixed(2);
+  const rotateY = (vertical * THRESHOLD - THRESHOLD / 2).toFixed(2);
+
+  currentTarget.style.transform = `perspective(${clientWidth}px) rotateX(${rotateY}deg) rotateY(${rotateX}deg) scale3d(1, 1, 1)`;
+}
+
+function resetStyles(e) {
+  e.currentTarget.style.transform = `perspective(${e.currentTarget.clientWidth}px) rotateX(0deg) rotateY(0deg)`;
+}
+
+if (!motionMatchMedia.matches) {
+  for (var i = 0; i < postItems.length; i++) {
+    postItems[i].addEventListener("mousemove", handleHover);
+    postItems[i].addEventListener("mouseleave", resetStyles);
+  }
+}
 </script>
