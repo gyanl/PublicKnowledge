@@ -13,8 +13,8 @@ layout: default
   {% for post in site.projects %}
   <a href="{{ post.url }}">
   <div class="post-item">
-    <img class="thumbnail" src="{{ post.thumbnail }}" alt="Thumbnail for {{ post.title }}" style="view-transition-name: {{ page.title | remove: ' ' }};">
-    <div class="post-title">{{ post.title }}</div>
+    <img class="thumbnail" src="{{ post.thumbnail }}" alt="Thumbnail for {{ post.title }}" style="view-transition-name: {{ post.title | remove: ' ' }};">
+    <div class="post-title" style="view-transition-name: {{ post.title | remove: ' ' }}Text;">{{ post.title }}</div>
     <div class="post-subtitle">{{ post.subtitle }}</div>
   </div>
   </a>
