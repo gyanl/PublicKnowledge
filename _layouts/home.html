@@ -11,7 +11,19 @@ layout: default
 </div>
 
 <div class="blog-container">
-  {% for post in site.blog %}
+  {% for post in site.projects %}
+  <a href="{{ post.url }}">
+  <div class="post-item">
+    <img class="thumbnail" src="{{ post.thumbnail }}" alt="Thumbnail for {{ post.title }}">
+    <div class="post-title">{{ post.title }}</div>
+    <div class="post-subtitle">{{ post.subtitle }}</div>
+  </div>
+  </a>
+  {% endfor %}
+</div>
+
+<div class="blog-container">
+  {% for post in site.team %}
   <a href="{{ post.url }}">
   <div class="post-item">
     <img class="thumbnail" src="{{ post.thumbnail }}" alt="Thumbnail for {{ post.title }}">
