@@ -540,6 +540,20 @@ h1.post-title.p-name {
   view-transition-name: blog-name;
 }
 
+
+
+@supports (view-timeline: --subjectReveal) {
+
+  .post-item {
+    view-timeline: --subjectReveal block;
+    animation-timeline: --subjectReveal;
+    animation-fill-mode: both;
+
+    animation-timing-function: ease-in-out;
+
+  }
+}
+
 .post-item {
   display: inline-block;
   // margin: 0 $spacing-unit/2 $spacing-unit 0;
@@ -548,13 +562,16 @@ h1.post-title.p-name {
   margin: 0 24px 24px 0;
   transition: 0.2s;
   border-radius: 4px;
-  // opacity: 0;
-  // animation: fadeInUp .5s ease-in-out;
-  // animation-fill-mode: forwards;
-  // transition: transform 0.1s ease;
-  // transform-style: preserve-3d;
-  // will-change: transform;
+  opacity: 0;
+  animation: fadeInUp;
+  animation-duration: 200ms;
+  animation-fill-mode: forwards;
+  transition: transform 0.1s ease;
+  transform-style: preserve-3d;
+  will-change: transform;
 }
+
+
 
 .post-item:hover {
   transform: translateZ(12px);
@@ -589,7 +606,7 @@ h1.post-title.p-name {
 
 }
 
-.hero{
+.hero {
   height: 40vh;
   object-fit: cover;
   object-position: 50% 0%;
@@ -618,11 +635,12 @@ h1.post-title.p-name {
   0% {
     transform: translateY(0);
   }
+
   100% {
     transform: translateY(-12px);
   }
 }
- 
+
 .post-header {
   text-align: center;
   padding: 2*$spacing-unit 0;
