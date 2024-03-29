@@ -1,0 +1,13 @@
+@keyframes endless-rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+.team-photo:hover {
+    animation: endless-rotation 2s infinite linear;
+}
