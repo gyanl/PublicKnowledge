@@ -1,8 +1,8 @@
 ---
 author: 
 layout: post
-subtitle: 
+subtitle: UI Design & Illustration
 tags: 
 thumbnail: https://gyanl.com/assets/thumbs/default.png
-title: 
+title: Namita Sunil
 ---
