@@ -11,3 +11,20 @@
 .team-photo:hover {
     animation: endless-rotation 2s infinite linear;
 }
+
+::view-transition-old(root) {
+    animation: 300ms cubic-bezier(0.4, 0, 1, 1) both fade-out,
+    300ms cubic-bezier(0.4, 0, 0.2, 1) both slide-to-left;
+  }
+  ::view-transition-new(root) {
+    animation: 700ms cubic-bezier(0, 0, 0.2, 1) 90ms both fade-in,
+    700ms cubic-bezier(0.4, 0, 0.2, 1) both slide-from-right;
+  }
+  .back-transition::view-transition-old(root) {
+    animation: 300ms cubic-bezier(0.4, 0, 1, 1) both fade-out,
+    300ms cubic-bezier(0.4, 0, 0.2, 1) both slide-to-right;
+  }
+  .back-transition::view-transition-new(root) {
+    animation: 700ms cubic-bezier(0, 0, 0.2, 1) 90ms both fade-in,
+    700ms cubic-bezier(0.4, 0, 0.2, 1) both slide-from-left;
+  }
