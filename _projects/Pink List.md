@@ -2,10 +2,10 @@
 author: 
 date: 2020-03-17
 layout: post
-subtitle: Who said what???
+subtitle: Tracking politicians
 tags:
   - website
-thumbnail: https://gyanl.com/assets/thumbs/default.png
+thumbnail: /assets/thumbs/pinklist.jpg
 title: Pink List
 ---
 
