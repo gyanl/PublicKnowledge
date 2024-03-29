@@ -13,7 +13,7 @@ layout: default
   {% for post in site.projects %}
   <a href="{{ post.url }}">
   <div class="post-item">
-    <img class="thumbnail" src="{{ post.thumbnail }}" alt="Thumbnail for {{ post.title }}">
+    <img class="thumbnail" src="{{ post.thumbnail }}" alt="Thumbnail for {{ post.title }}" style="view-transition-name: '{{ post.title }}';">
     <div class="post-title">{{ post.title }}</div>
     <div class="post-subtitle">{{ post.subtitle }}</div>
   </div>
