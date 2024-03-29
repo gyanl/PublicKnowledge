@@ -593,6 +593,7 @@ h1.post-title.p-name {
   height: 40vh;
   object-fit: cover;
   object-position: 50% 0%;
+  margin: 0;
 }
 
 .thumbnail-small {
@@ -614,6 +615,9 @@ h1.post-title.p-name {
   // padding: 6*$spacing-unit 0;
   margin: $spacing-unit 0;
   border-radius: 8px;
+  background-color: var(--background-color);
+  border-radius: 10px 10px 0 0;
+  animation: fadeInUp 1s ease-in-out;
 
   h1 {
     font-size: 48px;

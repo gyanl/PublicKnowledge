@@ -25,7 +25,7 @@ layout: default
   <a href="{{ post.url }}">
   <div class="post-item">
     <img class="team-photo" src="{{ post.thumbnail }}" alt="Thumbnail for {{ post.title }}">
-    <div class="post-title">{{ post.title }}</div>
+    <h1 class="post-title" style="view-transition-name: {{ post.title | remove: ' ' }}Text;">{{ post.title }}</h1>
     <div class="post-subtitle">{{ post.subtitle }}</div>
   </div>
   </a>
