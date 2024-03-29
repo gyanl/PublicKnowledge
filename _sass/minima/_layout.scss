@@ -586,6 +586,11 @@ h1.post-title.p-name {
   margin: 0 $spacing-unit 0 0;
   // outline: 1px solid rgba(0,0,0,0.15);
   // outline-offset: -1px;
+  view-transition-name: hero;
+}
+
+.hero{
+  view-transition-name: hero;
 }
 
 .thumbnail-small {
