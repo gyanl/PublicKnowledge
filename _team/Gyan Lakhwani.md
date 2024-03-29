@@ -3,6 +3,6 @@ author:
 layout: post
 subtitle: Design & Web Development
 tags: 
-thumbnail: https://gyanl.com/assets/thumbs/default.png
+thumbnail: /assets/gyan.jpg
 title: Gyan Lakhwani
 ---
