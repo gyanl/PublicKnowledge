@@ -1,5 +1,6 @@
 ---
 author: 
+color: "#FF4343"
 date: 2023-03-17
 layout: post
 permalink: hammock
@@ -13,3 +14,9 @@ title: Hammock Map
 > [[Charu Pragya]], [[Namita Sunil]], [[Gyan Lakhwani]]
 
 Our Friends at Hammock Magazine came to us with an idea for a map of writers around the world. Hello world
+
+When we worked on [[Borkowski]]
+
+## Heading 2
+Type some stuff
+
