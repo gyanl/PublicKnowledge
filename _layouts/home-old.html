@@ -7,6 +7,18 @@ layout: default
   <img src="https://gyanl.com/assets/gyanl-header.png">
 
 
+
+  <h1>Meet our Team</h1>
+  {% for post in site.team %}
+  <a href="{{ post.url }}">
+  <div class="post-item">
+    <img class="team-photo" src="{{ post.thumbnail }}" alt="Thumbnail for {{ post.title }}">
+    <h1 class="post-title" style="view-transition-name: {{ post.title | remove: ' ' }}Text;">{{ post.title }}</h1>
+    <div class="post-subtitle">{{ post.subtitle }}</div>
+  </div>
+  </a>
+  {% endfor %}
+
   <h5>ABOUT ME</h5>
   <p>
     Hello! My name is Gyan. I like technology, design and cats.

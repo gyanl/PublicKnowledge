@@ -1,7 +1,7 @@
 :root {
-  --base-font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
-  --title-font-family: "Instrument Serif", -apple-system, BlinkMacSystemFont, sans-serif;
-  --subtitle-font-family: "Instrument Serif", -apple-system, BlinkMacSystemFont, sans-serif;
+  --base-font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  --title-font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  --subtitle-font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
 
   --background-color: #ffffff;
   --background-color-darkmode: #0c0b1c;
@@ -572,7 +572,22 @@ h1.post-title.p-name {
   will-change: transform;
 }
 
-
+.post-item-mini{
+  display: flex;
+  flex-direction: row;
+  // margin: 0 $spacing-unit/2 $spacing-unit 0;
+  padding: $spacing-unit/4 0;
+  margin: 0 24px 24px 0;
+  transition: 0.2s;
+  border-radius: 4px;
+  opacity: 0;
+  animation: fadeInUp;
+  animation-duration: 300ms;
+  animation-fill-mode: forwards;
+  transition: transform 0.1s ease;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
 
 .post-item:hover {
   transform: translateZ(12px);
