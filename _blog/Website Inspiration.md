@@ -19,3 +19,9 @@ An Unusual Design Company
 Adam Majumdar’s bookshelf. Really sweet way of navigating around the bookshelf - click on the books and a dedicated page opens up, along with a sweet 3d animation on the book.
 ##### [MotherDuck](https://motherduck.com/)
 MotherDuck does Serverless Data Analytics with DuckDB. I don’t know what that means, but the site is pretty cool. The duck learns to fly!
+##### [Output](https://www.studio-output.com/)
+Brand and digital design studio
+
+[● XXIX](https://www.xxix.co/)
+A people-first design and technology studio
+
