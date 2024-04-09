@@ -22,6 +22,9 @@ Brand and digital design studio
 A people-first design and technology studio
 ##### [4844 Film](https://www.4844animation.com/)
 Single purpose page
+##### [Off Menu - Full-Service Design Subscription](https://offmenu.design/)
+
+##### [Bitesized | World's Most Delicious Design Subscription](https://www.bitesized.design/)
 ### Interactions
 ##### [Books | Adam Majmudar](https://adammaj.com/books)
 Adam Majumdar’s bookshelf. Really sweet way of navigating around the bookshelf - click on the books and a dedicated page opens up, along with a sweet 3d animation on the book.
@@ -33,7 +36,7 @@ MotherDuck does Serverless Data Analytics with DuckDB. I don’t know what that 
 When did we lose our heart?
 ##### [CATHEY & MILES TRIAL LAWYERS](https://catheymiles.com/)
 
-### Collections
+##### [About Height 2.0](https://height.app/v2)
+### Editorial
 
-##### [Dead Simple Sites — Minimal Website Inspiration](https://deadsimplesites.com/)
-Less, but better. The most minimal sites on the web, curated in one place.
+##### [WeTransfer Ideas Report 2022](https://wetransfer.com/ideas-report/2022)
