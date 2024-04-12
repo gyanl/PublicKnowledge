@@ -3,10 +3,8 @@ layout: default
 ---
 
 <div class="intro">
-  <h2>
     Public Knowledge is an opinionated design studio. This is our presence on the internet.
     Our team of designers, developers, and strategists make technology that works for humans.
-  </h2>
 </div>
 
   <h1>Our Work</h1>
@@ -25,9 +23,9 @@ layout: default
   {% for post in site.blog %}
   <a href="{{ post.url }}">
   <div class="post-item-mini">
-    <img class="team-photo" width="24px" height="24px" src="{{ post.thumbnail }}" alt="Thumbnail for {{ post.title }}">
-    <h3 class="post-title" style="view-transition-name: {{ post.title | remove: ' ' }}Text;">{{ post.title }}</h3>
-    <div class="post-subtitle">{{ post.subtitle }}</div>
+    <span class="text-big text-bold" style="view-transition-name: {{ post.title | remove: ' ' }}Text;">{{ post.title }}</span>
+    <span class="divider">✦</span>
+    <span class="text-big">{{ post.subtitle }}</span>
   </div>
   </a>
   {% endfor %}

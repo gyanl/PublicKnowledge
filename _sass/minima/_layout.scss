@@ -261,17 +261,20 @@
  */
 .site-header {
   position: fixed;
-  left: 60px;
-  line-height: 60px;
-  padding: $spacing-unit/3 $spacing-unit*1.25;
-  background: var(--overlay-color);
+  right: $spacing-unit*4;
+  padding: $spacing-unit*2.5 $spacing-unit $spacing-unit/2 $spacing-unit;
+  background: rgba(0, 0, 0, 0.75);
   // border-bottom: 1px solid var(--overlay-edge-color);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   // border-bottom: 1px solid darken($text-color-darker, 32%);
   // Positioning context for the mobile navigation icon
   z-index: 10;
-  border-radius: 0 0 8px 8px;
+  transition: 200ms;
+}
+
+.site-header:hover{
+  padding-top: $spacing-unit*3;
 }
 
 @media screen and (max-width: $on-palm) {
@@ -282,10 +285,11 @@
 }
 
 .site-title {
-  color: var(--text-color-dark);
+  color: var(--background-color);
   @include relative-font-size(1.25);
-  font-weight: 800;
+  font-weight: 400;
   margin-bottom: 0;
+  font-size: 32px;
   float: left;
   vertical-align: middle;
 
@@ -295,7 +299,7 @@
 
   &,
   &:visited {
-    color: var(--text-color-dark);
+    color: var(--background-color);
   }
 }
 
@@ -457,6 +461,7 @@
 }
 
 .intro {
+  font-size: 24px;
   padding: 2 * $spacing-unit 0;
   flex-grow: 1;
 }
@@ -573,11 +578,8 @@ h1.post-title.p-name {
 }
 
 .post-item-mini{
-  display: flex;
-  flex-direction: row;
-  // margin: 0 $spacing-unit/2 $spacing-unit 0;
-  padding: $spacing-unit/4 0;
-  margin: 0 24px 24px 0;
+  display: block;
+  padding: $spacing-unit 0 $spacing-unit 0;
   transition: 0.2s;
   border-radius: 4px;
   opacity: 0;
@@ -587,6 +589,7 @@ h1.post-title.p-name {
   transition: transform 0.1s ease;
   transform-style: preserve-3d;
   will-change: transform;
+  border-top: 1px solid var(--overlay-edge-color);
 }
 
 .post-item:hover {

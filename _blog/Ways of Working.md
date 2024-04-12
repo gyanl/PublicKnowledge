@@ -6,9 +6,14 @@ tags:
 thumbnail: /assets/thumbs/default.png
 title: Ways of Working
 ---
-1. Own your work. 
-2. Feedback is a gift. Someone taking out time to help you get better with actionable advice is doing you a favor. Don’t get defensive, listen with open ears and judge later.
-3. Be excellent to each other. People remember how they feel more than what they did. 
+
+#### Own your work
+
+##### Be excellent to each other. 
+People remember how they feel more than what they did. 
+##### Feedback is a gift
+Someone taking out time to help you get better with actionable advice is doing you a favor. Don’t get defensive, listen with open ears and judge later.
+##### Give away your legos
 
 3/ the reward for good work is more work
 
@@ -28,7 +33,7 @@ title: Ways of Working
 
 11/ HR exists to protect the company
 
-12/ give away your legos
+12/ 
 
 13/ squeaky wheels get the grease: managers default spend the most time on underperformers, teammates have to do overtime to cover dropped balls (on not only the work itself, but also the delicate communication required around it)
 
@@ -38,5 +43,5 @@ title: Ways of Working
 
 16/ repetition doesn't spoil the prayer
 ### References
-[Creating a new agency culture – Thought | Output](https://www.studio-output.com/thought/creating-a-new-agency-culture/)
+[Creating a new agency culture – Thought | Output](https://www.studio-output.com/thought/creating-a-new-agency-culture/) 
 [Primary Branding Studio - Sprints](https://primary.studio/sprints/)

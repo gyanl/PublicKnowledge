@@ -28,7 +28,6 @@ Single purpose page
 ### Interactions
 ##### [Books | Adam Majmudar](https://adammaj.com/books)
 Adam Majumdar’s bookshelf. Really sweet way of navigating around the bookshelf - click on the books and a dedicated page opens up, along with a sweet 3d animation on the book.
-
 ### Products/Services
 ##### [MotherDuck](https://motherduck.com/)
 MotherDuck does Serverless Data Analytics with DuckDB. I don’t know what that means, but the site is pretty cool. The duck learns to fly!
