@@ -119,10 +119,6 @@
 
       <div class="setting">
         <button onclick="downloadAsPng()">Download .png</button>
-        <button onclick="downloadAsSvg()">Download .svg</button>
-      </div>
-
-      <div class="setting">
         <button onclick="randomize()">Randomize</button>
       </div>
     </div>
@@ -257,16 +253,7 @@
       link.click();
     }
 
-    function downloadAsSvg() {
-      const svgData = new XMLSerializer().serializeToString(canvas);
-      const blob = new Blob([svgData], { type: "image/svg+xml" });
-      const url = URL.createObjectURL(blob);
-      const link = document.createElement('a');
-      link.download = 'publicknowledge.svg';
-      link.href = url;
-      link.click();
-    }
-
+    randomize(); // Randomize initial values
     draw();  // Draw initial image
   </script>
 </body>
