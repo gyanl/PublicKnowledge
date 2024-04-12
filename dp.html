@@ -69,7 +69,10 @@
     const y = canvas.height / 2 + parseInt(yOffset.value);
     const w = parseInt(widthSlider.value);
     const h = parseInt(heightSlider.value);
-    const r = parseInt(borderRadius.value);
+    let r = parseInt(borderRadius.value);
+
+    // Adjust the border radius if it's too large
+    r = Math.min(r, w / 2, h / 2);
 
     for (let i = 0; i < sides; i++) {
       ctx.beginPath();
