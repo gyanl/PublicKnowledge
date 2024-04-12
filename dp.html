@@ -9,6 +9,16 @@
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
       padding: 20px;
+      font-size: large;
+      display: flex;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        flex-direction: column;
+        align-items: left;
+      }
+
     }
 
     label {
@@ -20,17 +30,18 @@
       margin-top: 20px;
       border: 1px solid #eee;
       border-radius: 8px;
+      height: 360px;
+      width: 360px;
+      margin-right: 32px;
     }
 
     .setting {
-      margin: 10px 0;
+      margin: 14px 0;
     }
 
     button {
-      padding: 5px 10px;
-      margin-right: 10px;
-      padding: 12px;
-      margin-right: 4px;
+      padding: 12px 20px;
+      margin-right: 12px;
       background: #eee;
       color: #333;
       border: none;
@@ -44,131 +55,199 @@
       background: #ddd;
       border: 1px solid #ccc;
     }
-
   </style>
 </head>
 
 <body>
 
-  <canvas id="canvas" width="512" height="512"></canvas>
+  <canvas id="canvas" width="720" height="720"></canvas>
+  <div class="settings">
+    <div class="setting">
+      <label for="bgColor">Background Color:</label>
+      <input type="color" id="bgColor" value="#ffffff">
+    </div>
 
-  <div class="setting">
-    <label for="bgColor">Background Color:</label>
-    <input type="color" id="bgColor" value="#ffffff">
-  </div>
+    <div class="setting">
+      <label for="fgColor">Foreground Color:</label>
+      <input type="color" id="fgColor" value="#000000">
+    </div>
 
-  <div class="setting">
-    <label for="fgColor">Foreground Color:</label>
-    <input type="color" id="fgColor" value="#000000">
-  </div>
+    <div class="setting">
+      <label for="xOffset">X Offset:</label>
+      <input type="range" id="xOffset" min="-50" max="50" value="0">
+    </div>
 
-  <div class="setting">
-    <label for="xOffset">X Offset:</label>
-    <input type="range" id="xOffset" min="-100" max="100" value="0">
-  </div>
+    <div class="setting">
+      <label for="yOffset">Y Offset:</label>
+      <input type="range" id="yOffset" min="-50" max="50" value="0">
+    </div>
 
-  <div class="setting">
-    <label for="yOffset">Y Offset:</label>
-    <input type="range" id="yOffset" min="-100" max="100" value="0">
-  </div>
+    <div class="setting">
+      <label for="width">Width:</label>
+      <input type="range" id="width" min="10" max="150" value="50">
+    </div>
 
-  <div class="setting">
-    <label for="width">Width:</label>
-    <input type="range" id="width" min="10" max="150" value="50">
-  </div>
+    <div class="setting">
+      <label for="height">Height:</label>
+      <input type="range" id="height" min="10" max="150" value="50">
+    </div>
 
-  <div class="setting">
-    <label for="height">Height:</label>
-    <input type="range" id="height" min="10" max="150" value="50">
-  </div>
+    <div class="setting">
+      <label for="borderRadius">Border Radius:</label>
+      <input type="range" id="borderRadius" min="0" max="50" value="0">
+    </div>
 
-  <div class="setting">
-    <label for="borderRadius">Border Radius:</label>
-    <input type="range" id="borderRadius" min="0" max="50" value="0">
-  </div>
+    <div class="setting">
+      <button onclick="downloadAsPng()">Download .png</button>
+      <button onclick="downloadAsSvg()">Download .svg</button>
+    </div>
 
-  <div class="setting">
-    <button onclick="randomize()">Randomize</button>
-    <button onclick="download()">Download</button>
-  </div>
-
+    <div class="setting">
+      <button onclick="randomize()">Randomize</button>
+    </div>
 
 
-  <script>
-    const canvas = document.getElementById('canvas');
-    const ctx = canvas.getContext('2d');
-    const bgColor = document.getElementById('bgColor');
-    const fgColor = document.getElementById('fgColor');
-    const xOffset = document.getElementById('xOffset');
-    const yOffset = document.getElementById('yOffset');
-    const widthSlider = document.getElementById('width');
-    const heightSlider = document.getElementById('height');
-    const borderRadius = document.getElementById('borderRadius');
+    <script>
+      const canvas = document.getElementById('canvas');
+      const ctx = canvas.getContext('2d');
+      const bgColor = document.getElementById('bgColor');
+      const fgColor = document.getElementById('fgColor');
+      const xOffset = document.getElementById('xOffset');
+      const yOffset = document.getElementById('yOffset');
+      const widthSlider = document.getElementById('width');
+      const heightSlider = document.getElementById('height');
+      const borderRadius = document.getElementById('borderRadius');
 
-    bgColor.addEventListener('input', draw);
-    fgColor.addEventListener('input', draw);
-    xOffset.addEventListener('input', draw);
-    yOffset.addEventListener('input', draw);
-    widthSlider.addEventListener('input', draw);
-    heightSlider.addEventListener('input', draw);
-    borderRadius.addEventListener('input', draw);
+      bgColor.addEventListener('input', draw);
+      fgColor.addEventListener('input', draw);
+      xOffset.addEventListener('input', draw);
+      yOffset.addEventListener('input', draw);
+      widthSlider.addEventListener('input', draw);
+      heightSlider.addEventListener('input', draw);
+      borderRadius.addEventListener('input', draw);
 
-    function randomize() {
-      bgColor.value = '#' + Math.floor(Math.random() * 16777215).toString(16);
-      fgColor.value = '#' + Math.floor(Math.random() * 16777215).toString(16);
-      xOffset.value = Math.floor(Math.random() * 201) - 100;
-      yOffset.value = Math.floor(Math.random() * 201) - 100;
-      widthSlider.value = Math.floor(Math.random() * 141) + 10;
-      heightSlider.value = Math.floor(Math.random() * 141) + 10;
-      borderRadius.value = Math.floor(Math.random() * 51);
-      draw();
-    }
-
-    function draw() {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      ctx.fillStyle = bgColor.value;
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
-      ctx.fillStyle = fgColor.value;
-
-      const sides = 6;
-      const x = canvas.width / 2 + parseInt(xOffset.value);
-      const y = canvas.height / 2 + parseInt(yOffset.value);
-      const w = parseInt(widthSlider.value);
-      const h = parseInt(heightSlider.value);
-      let r = parseInt(borderRadius.value);
-
-      // Adjust the border radius if it's too large
-      r = Math.min(r, w / 2, h / 2);
-
-      for (let i = 0; i < sides; i++) {
-        ctx.beginPath();
-        ctx.moveTo(x + r, y);
-        ctx.lineTo(x + w - r, y);
-        ctx.quadraticCurveTo(x + w, y, x + w, y + r);
-        ctx.lineTo(x + w, y + h - r);
-        ctx.quadraticCurveTo(x + w, y + h, x + w - r, y + h);
-        ctx.lineTo(x + r, y + h);
-        ctx.quadraticCurveTo(x, y + h, x, y + h - r);
-        ctx.lineTo(x, y + r);
-        ctx.quadraticCurveTo(x, y, x + r, y);
-        ctx.closePath();
-        ctx.fill();
-        ctx.translate(canvas.width / 2, canvas.height / 2);
-        ctx.rotate((Math.PI / 180) * (360 / sides));
-        ctx.translate(-canvas.width / 2, -canvas.height / 2);
+      function randomize() {
+        bgColor.value = '#' + Math.floor(Math.random() * 16777215).toString(16);
+        fgColor.value = '#' + Math.floor(Math.random() * 16777215).toString(16);
+        xOffset.value = Math.floor(Math.random() * 151) - 100;
+        yOffset.value = Math.floor(Math.random() * 151) - 100;
+        widthSlider.value = Math.floor(Math.random() * 141) + 10;
+        heightSlider.value = Math.floor(Math.random() * 141) + 10;
+        borderRadius.value = Math.floor(Math.random() * 51);
+        draw();
       }
-    }
 
-    function download() {
-      const image = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
-      const link = document.createElement('a');
-      link.download = 'publicknowledge.png';
-      link.href = image;
-      link.click();
-    }
+      const HIT_AREA = 10; // Pixels from the edge considered as a hit area for resizing
 
-    draw();  // Draw initial image
-  </script>
+      // Utility function to detect cursor near the edges of a shape
+      function cursorNearEdge(x, y, shape) {
+        // Assume shape has x, y, width, height properties
+        return {
+          left: Math.abs(x - shape.x) < HIT_AREA,
+          right: Math.abs(x - (shape.x + shape.width)) < HIT_AREA,
+          top: Math.abs(y - shape.y) < HIT_AREA,
+          bottom: Math.abs(y - (shape.y + shape.height)) < HIT_AREA
+        };
+      }
+
+      canvas.addEventListener('mousedown', (e) => {
+        // ... [other event code]
+
+        const rect = canvas.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        // Detect if the cursor is near an edge
+        const edges = cursorNearEdge(x, y, shape);
+        if (edges.left || edges.right || edges.top || edges.bottom) {
+          // Start resizing the shape
+          isResizing = true;
+          // Store which edges are being resized
+          resizingEdges = edges;
+        }
+      });
+
+      canvas.addEventListener('mousemove', (e) => {
+        if (isResizing) {
+          // ... [resize logic based on the edges detected and cursor position]
+          // For example, if the right edge is being dragged:
+          if (resizingEdges.right) {
+            const newWidth = e.clientX - rect.left - shape.x;
+            if (newWidth > MIN_SHAPE_SIZE) { // Ensure shape does not invert
+              shape.width = newWidth;
+            }
+          }
+          // Similar logic for other edges
+          // ...
+        }
+      });
+
+
+      function draw() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.fillStyle = bgColor.value;
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        ctx.fillStyle = fgColor.value;
+
+        const sides = 6;
+        const x = canvas.width / 2 + parseInt(xOffset.value);
+        const y = canvas.height / 2 + parseInt(yOffset.value);
+        const w = parseInt(widthSlider.value);
+        const h = parseInt(heightSlider.value);
+        let r = parseInt(borderRadius.value);
+
+        // Adjust the border radius if it's too large
+        r = Math.min(r, w / 2, h / 2);
+
+        /**
+         * Draws a shape with rounded corners using the HTML canvas API.
+         *
+         * @param {number} x - The x-coordinate of the top-left corner of the shape.
+         * @param {number} y - The y-coordinate of the top-left corner of the shape.
+         * @param {number} w - The width of the shape.
+         * @param {number} h - The height of the shape.
+         * @param {number} r - The radius of the rounded corners.
+         * @param {number} sides - The number of sides of the shape.
+         */
+        for (let i = 0; i < sides; i++) {
+          ctx.beginPath();
+          ctx.moveTo(x + r, y);
+          ctx.lineTo(x + w - r, y);
+          ctx.quadraticCurveTo(x + w, y, x + w, y + r);
+          ctx.lineTo(x + w, y + h - r);
+          ctx.quadraticCurveTo(x + w, y + h, x + w - r, y + h);
+          ctx.lineTo(x + r, y + h);
+          ctx.quadraticCurveTo(x, y + h, x, y + h - r);
+          ctx.lineTo(x, y + r);
+          ctx.quadraticCurveTo(x, y, x + r, y);
+          ctx.closePath();
+          ctx.fill();
+          ctx.translate(canvas.width / 2, canvas.height / 2);
+          ctx.rotate((Math.PI / 180) * (360 / sides));
+          ctx.translate(-canvas.width / 2, -canvas.height / 2);
+        }
+      }
+
+      function downloadAsPng() {
+        const image = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
+        const link = document.createElement('a');
+        link.download = 'publicknowledge.png';
+        link.href = image;
+        link.click();
+      }
+
+      function downloadAsSvg() {
+        const svgData = new XMLSerializer().serializeToString(canvas);
+        const blob = new Blob([svgData], { type: "image/svg+xml" });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.download = 'publicknowledge.svg';
+        link.href = url;
+        link.click();
+      }
+
+      draw();  // Draw initial image
+    </script>
 </body>
 
 </html>
