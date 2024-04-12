@@ -1,107 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<title>Image Generator</title>
-<style>
-  body { font-family: Arial, sans-serif; padding: 20px; }
-  label { margin-right: 10px; }
-  #canvas { display: block; margin-top: 20px; }
-</style>
+  <meta charset="UTF-8">
+  <title>Image Generator</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+      padding: 20px;
+    }
+
+    label {
+      margin-right: 10px;
+    }
+
+    #canvas {
+      display: block;
+      margin-top: 20px;
+      border: 1px solid #eee;
+      border-radius: 8px;
+    }
+
+    .setting {
+      margin: 10px 0;
+    }
+
+    button {
+      padding: 5px 10px;
+      margin-right: 10px;
+      padding: 12px;
+      margin-right: 4px;
+      background: #eee;
+      color: #333;
+      border: none;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    button:hover {
+      background: #ddd;
+      border: 1px solid #ccc;
+    }
+
+  </style>
 </head>
+
 <body>
-  <label for="bgColor">Background Color:</label>
-  <input type="color" id="bgColor" value="#ffffff">
-  <label for="fgColor">Foreground Color:</label>
-  <input type="color" id="fgColor" value="#000000">
-  <label for="xOffset">X Offset:</label>
-  <input type="range" id="xOffset" min="-100" max="100" value="0">
-  <label for="yOffset">Y Offset:</label>
-  <input type="range" id="yOffset" min="-100" max="100" value="0">
-  <label for="width">Width:</label>
-  <input type="range" id="width" min="10" max="150" value="50">
-  <label for="height">Height:</label>
-  <input type="range" id="height" min="10" max="150" value="50">
-  <label for="borderRadius">Border Radius:</label>
-  <input type="range" id="borderRadius" min="0" max="50" value="0">
-  <button onclick="randomize()">Randomize</button>
-  <button onclick="download()">Download</button>
+
   <canvas id="canvas" width="500" height="500"></canvas>
 
-<script>
-  const canvas = document.getElementById('canvas');
-  const ctx = canvas.getContext('2d');
-  const bgColor = document.getElementById('bgColor');
-  const fgColor = document.getElementById('fgColor');
-  const xOffset = document.getElementById('xOffset');
-  const yOffset = document.getElementById('yOffset');
-  const widthSlider = document.getElementById('width');
-  const heightSlider = document.getElementById('height');
-  const borderRadius = document.getElementById('borderRadius');
+  <div class="setting">
+    <label for="bgColor">Background Color:</label>
+    <input type="color" id="bgColor" value="#ffffff">
+  </div>
 
-  bgColor.addEventListener('input', draw);
-  fgColor.addEventListener('input', draw);
-  xOffset.addEventListener('input', draw);
-  yOffset.addEventListener('input', draw);
-  widthSlider.addEventListener('input', draw);
-  heightSlider.addEventListener('input', draw);
-  borderRadius.addEventListener('input', draw);
+  <div class="setting">
+    <label for="fgColor">Foreground Color:</label>
+    <input type="color" id="fgColor" value="#000000">
+  </div>
 
-  function randomize() {
-    bgColor.value = '#' + Math.floor(Math.random() * 16777215).toString(16);
-    fgColor.value = '#' + Math.floor(Math.random() * 16777215).toString(16);
-    xOffset.value = Math.floor(Math.random() * 201) - 100;
-    yOffset.value = Math.floor(Math.random() * 201) - 100;
-    widthSlider.value = Math.floor(Math.random() * 141) + 10;
-    heightSlider.value = Math.floor(Math.random() * 141) + 10;
-    borderRadius.value = Math.floor(Math.random() * 51);
-    draw();
-  }
+  <div class="setting">
+    <label for="xOffset">X Offset:</label>
+    <input type="range" id="xOffset" min="-100" max="100" value="0">
+  </div>
 
-  function draw() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.fillStyle = bgColor.value;
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-    ctx.fillStyle = fgColor.value;
+  <div class="setting">
+    <label for="yOffset">Y Offset:</label>
+    <input type="range" id="yOffset" min="-100" max="100" value="0">
+  </div>
 
-    const sides = 6;
-    const x = canvas.width / 2 + parseInt(xOffset.value);
-    const y = canvas.height / 2 + parseInt(yOffset.value);
-    const w = parseInt(widthSlider.value);
-    const h = parseInt(heightSlider.value);
-    let r = parseInt(borderRadius.value);
+  <div class="setting">
+    <label for="width">Width:</label>
+    <input type="range" id="width" min="10" max="150" value="50">
+  </div>
 
-    // Adjust the border radius if it's too large
-    r = Math.min(r, w / 2, h / 2);
+  <div class="setting">
+    <label for="height">Height:</label>
+    <input type="range" id="height" min="10" max="150" value="50">
+  </div>
 
-    for (let i = 0; i < sides; i++) {
-      ctx.beginPath();
-      ctx.moveTo(x + r, y);
-      ctx.lineTo(x + w - r, y);
-      ctx.quadraticCurveTo(x + w, y, x + w, y + r);
-      ctx.lineTo(x + w, y + h - r);
-      ctx.quadraticCurveTo(x + w, y + h, x + w - r, y + h);
-      ctx.lineTo(x + r, y + h);
-      ctx.quadraticCurveTo(x, y + h, x, y + h - r);
-      ctx.lineTo(x, y + r);
-      ctx.quadraticCurveTo(x, y, x + r, y);
-      ctx.closePath();
-      ctx.fill();
-      ctx.translate(canvas.width / 2, canvas.height / 2);
-      ctx.rotate((Math.PI / 180) * (360 / sides));
-      ctx.translate(-canvas.width / 2, -canvas.height / 2);
+  <div class="setting">
+    <label for="borderRadius">Border Radius:</label>
+    <input type="range" id="borderRadius" min="0" max="50" value="0">
+  </div>
+
+  <div class="setting">
+    <button onclick="randomize()">Randomize</button>
+    <button onclick="download()">Download</button>
+  </div>
+
+
+
+  <script>
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+    const bgColor = document.getElementById('bgColor');
+    const fgColor = document.getElementById('fgColor');
+    const xOffset = document.getElementById('xOffset');
+    const yOffset = document.getElementById('yOffset');
+    const widthSlider = document.getElementById('width');
+    const heightSlider = document.getElementById('height');
+    const borderRadius = document.getElementById('borderRadius');
+
+    bgColor.addEventListener('input', draw);
+    fgColor.addEventListener('input', draw);
+    xOffset.addEventListener('input', draw);
+    yOffset.addEventListener('input', draw);
+    widthSlider.addEventListener('input', draw);
+    heightSlider.addEventListener('input', draw);
+    borderRadius.addEventListener('input', draw);
+
+    function randomize() {
+      bgColor.value = '#' + Math.floor(Math.random() * 16777215).toString(16);
+      fgColor.value = '#' + Math.floor(Math.random() * 16777215).toString(16);
+      xOffset.value = Math.floor(Math.random() * 201) - 100;
+      yOffset.value = Math.floor(Math.random() * 201) - 100;
+      widthSlider.value = Math.floor(Math.random() * 141) + 10;
+      heightSlider.value = Math.floor(Math.random() * 141) + 10;
+      borderRadius.value = Math.floor(Math.random() * 51);
+      draw();
     }
-  }
 
-  function download() {
-    const image = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
-    const link = document.createElement('a');
-    link.download = 'my-image.png';
-    link.href = image;
-    link.click();
-  }
+    function draw() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = bgColor.value;
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = fgColor.value;
 
-  draw();  // Draw initial image
-</script>
+      const sides = 6;
+      const x = canvas.width / 2 + parseInt(xOffset.value);
+      const y = canvas.height / 2 + parseInt(yOffset.value);
+      const w = parseInt(widthSlider.value);
+      const h = parseInt(heightSlider.value);
+      let r = parseInt(borderRadius.value);
+
+      // Adjust the border radius if it's too large
+      r = Math.min(r, w / 2, h / 2);
+
+      for (let i = 0; i < sides; i++) {
+        ctx.beginPath();
+        ctx.moveTo(x + r, y);
+        ctx.lineTo(x + w - r, y);
+        ctx.quadraticCurveTo(x + w, y, x + w, y + r);
+        ctx.lineTo(x + w, y + h - r);
+        ctx.quadraticCurveTo(x + w, y + h, x + w - r, y + h);
+        ctx.lineTo(x + r, y + h);
+        ctx.quadraticCurveTo(x, y + h, x, y + h - r);
+        ctx.lineTo(x, y + r);
+        ctx.quadraticCurveTo(x, y, x + r, y);
+        ctx.closePath();
+        ctx.fill();
+        ctx.translate(canvas.width / 2, canvas.height / 2);
+        ctx.rotate((Math.PI / 180) * (360 / sides));
+        ctx.translate(-canvas.width / 2, -canvas.height / 2);
+      }
+    }
+
+    function download() {
+      const image = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
+      const link = document.createElement('a');
+      link.download = 'publicknowledge.png';
+      link.href = image;
+      link.click();
+    }
+
+    draw();  // Draw initial image
+  </script>
 </body>
+
 </html>
