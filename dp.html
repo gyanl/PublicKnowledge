@@ -24,6 +24,7 @@
   <input type="range" id="height" min="10" max="150" value="50">
   <label for="borderRadius">Border Radius:</label>
   <input type="range" id="borderRadius" min="0" max="50" value="0">
+  <button onclick="randomize()">Randomize</button>
   <button onclick="download()">Download</button>
   <canvas id="canvas" width="500" height="500"></canvas>
 
@@ -38,7 +39,6 @@
   const heightSlider = document.getElementById('height');
   const borderRadius = document.getElementById('borderRadius');
 
-  // Event listeners for instant drawing
   bgColor.addEventListener('input', draw);
   fgColor.addEventListener('input', draw);
   xOffset.addEventListener('input', draw);
@@ -47,13 +47,24 @@
   heightSlider.addEventListener('input', draw);
   borderRadius.addEventListener('input', draw);
 
+  function randomize() {
+    bgColor.value = '#' + Math.floor(Math.random() * 16777215).toString(16);
+    fgColor.value = '#' + Math.floor(Math.random() * 16777215).toString(16);
+    xOffset.value = Math.floor(Math.random() * 201) - 100;
+    yOffset.value = Math.floor(Math.random() * 201) - 100;
+    widthSlider.value = Math.floor(Math.random() * 141) + 10;
+    heightSlider.value = Math.floor(Math.random() * 141) + 10;
+    borderRadius.value = Math.floor(Math.random() * 51);
+    draw();
+  }
+
   function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.fillStyle = bgColor.value;
     ctx.fillRect(0, 0, canvas.width, canvas.height);
     ctx.fillStyle = fgColor.value;
 
-    const sides = 6; // Six copies
+    const sides = 6;
     const x = canvas.width / 2 + parseInt(xOffset.value);
     const y = canvas.height / 2 + parseInt(yOffset.value);
     const w = parseInt(widthSlider.value);
@@ -87,8 +98,7 @@
     link.click();
   }
 
-  // Initial drawing
-  draw();
+  draw();  // Draw initial image
 </script>
 </body>
 </html>
