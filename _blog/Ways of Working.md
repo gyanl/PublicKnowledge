@@ -7,41 +7,26 @@ thumbnail: /assets/thumbs/default.png
 title: Ways of Working
 ---
 
+#### Doodle License Granted
+Here’s your license to scribble outside the lines. Dive into your creative depths—experiment, innovate, and maybe even disrupt a little. Just make sure it aligns with the grand plan!
+#### Be Excellent to Each Other (and yourself!)
+People remember how they feel more than the actions taken. Always aim to leave a positive impression. Give yourself the same leeway you grant to others.
 #### Own your work
-
-##### Be excellent to each other. 
-People remember how they feel more than what they did. 
-##### Feedback is a gift
-Someone taking out time to help you get better with actionable advice is doing you a favor. Don’t get defensive, listen with open ears and judge later.
-##### Give away your legos
-
-3/ the reward for good work is more work
-
-4/ people don’t leave companies, they leave managers
-
-5/ manage up, get face time
-
-6/ A players hire A players, B players hire C players: once you start bringing in the B team, its only a few months before C players outnumber your A players. once that happens, it's unlikely your A players want to stick around.
-
-7/ burnout = how much you care / how much you can control
-
-8/ no substitute for reps, reps, reps: probably the biggest reason the hardest workers get ahead
-
-9/ management is its own skill: it's not just being a really, really good practitioner
-
-10/ growth buries the bodies: IMO a feature, not a bug, best to keep chugging along if its working
-
-11/ HR exists to protect the company
-
-12/ 
-
-13/ squeaky wheels get the grease: managers default spend the most time on underperformers, teammates have to do overtime to cover dropped balls (on not only the work itself, but also the delicate communication required around it)
-
-
-
-15/ if you want to go fast, go alone. if you want to go far, go together.
-
-16/ repetition doesn't spoil the prayer
+You can just do things! If you have an itch to try something, scratch it. If something feels broken to you, do what it takes to fix it. Leave things better than you found them.
+#### Feedback is a Gift
+Receiving actionable advice from others is beneficial. Listen openly without getting defensive, note things down, and evaluate the feedback later.
+#### Give Away Your Legos
+Did a great job? Brace yourself for more! Hand off your current blocks (tasks) to build even bigger ones.
+#### Stay Curious
+Ask questions. Always be on the lookout for a chance to learn something and do something new. 
+#### Teamwork makes the dream work
+If you want to go fast, go alone. If you want to go far, go together. Together, we make magic happen.
+#### Market yourself as yourself
+Let your marketing reflect your personality to attract clients who will enjoy working with you.
+#### Reflexivity
+Oops? No problem! Things are bound to go wrong. When they do, every misstep is a new dance move you’ve just learned. Keep grooving and growing.
+#### Radical Service
+Constantly think about how you can serve people exceptionally well to stand out. What is a standard practice that doesn’t have to be standard?
 ### References
 [Creating a new agency culture – Thought | Output](https://www.studio-output.com/thought/creating-a-new-agency-culture/) 
 [Primary Branding Studio - Sprints](https://primary.studio/sprints/)
